@@ -7,7 +7,7 @@ import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
 @Component
-public class ClientValidator implements Validator {
+public class UserValidator implements Validator {
 
     @Override
     public boolean supports(Class<?> clazz) {
@@ -16,9 +16,6 @@ public class ClientValidator implements Validator {
 
     @Override
     public void validate(Object obj, Errors errors) {
-
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "mail", "error", "Ошибка! Поле не может быть пустым!");
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "error", "Ошибка! Поле не может быть пустым!");
 
         UserDto userDto = (UserDto) obj;
         if (userDto != null) {

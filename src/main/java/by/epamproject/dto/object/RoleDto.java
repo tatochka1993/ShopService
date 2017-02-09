@@ -1,10 +1,14 @@
 package by.epamproject.dto.object;
 
+import com.google.gson.annotations.Expose;
+
 import java.io.Serializable;
 
 public class RoleDto implements Serializable {
 
+    @Expose
     private int id;
+    @Expose
     private String name;
 
     public RoleDto() {

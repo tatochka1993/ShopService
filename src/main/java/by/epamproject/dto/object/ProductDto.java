@@ -1,14 +1,22 @@
 package by.epamproject.dto.object;
 
+import com.google.gson.annotations.Expose;
+
 import java.io.Serializable;
 
 public class ProductDto implements Serializable {
 
+    @Expose
     private int id;
+    @Expose
     private String nameProduct;
+    @Expose
     private String description;
+    @Expose
     private String nameImage;
+    @Expose
     private String serverNameImage;
+    @Expose
     private double price;
 
     public ProductDto() {

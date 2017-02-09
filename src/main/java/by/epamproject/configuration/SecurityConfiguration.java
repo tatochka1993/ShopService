@@ -60,7 +60,7 @@ package by.epamproject.configuration;
 //            .loginProcessingUrl("/j_spring_security_check")
 //            .defaultSuccessUrl("/")
 //            .failureUrl("/login?error")
-//            .usernameParameter("mail")
+//            .usernameParameter("login")
 //            .passwordParameter("password")
 //
 //            .and()

@@ -1,7 +1,7 @@
 package by.epamproject.service.impl;
 
 import by.epamproject.service.HelperSoapService;
-import com.finalproject.webservice.impl.PriceDatabase;
+import mypackage.PriceDatabase;
 import org.springframework.stereotype.Service;
 
 import javax.xml.namespace.QName;
@@ -40,9 +40,7 @@ public class HelperSoapServiceImpl implements HelperSoapService {
 
     private javax.xml.ws.Service connectToSoap() throws Exception {
         URL url = new URL("http://localhost:9999/ws/priceService?wsdl");
-        QName qname = new QName("http://impl.webservice.finalproject.com/", "PriceDatabaseService");
+        QName qname = new QName("http://impl.webservice.finalproject/", "PriceDatabaseService");
         return javax.xml.ws.Service.create(url, qname);
     }
-
-
 }

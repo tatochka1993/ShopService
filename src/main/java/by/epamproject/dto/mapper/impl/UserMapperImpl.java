@@ -29,6 +29,7 @@ public class UserMapperImpl implements UserMapper {
         userDto.setPassword(user.getPassword());
         userDto.setFirstName(user.getFirstName());
         userDto.setLastName(user.getLastName());
+        userDto.setCity(user.getCity());
         return userDto;
     }
 
@@ -42,6 +43,7 @@ public class UserMapperImpl implements UserMapper {
         user.setPassword(userDto.getPassword());
         user.setFirstName(userDto.getFirstName());
         user.setLastName(userDto.getLastName());
+        user.setCity(userDto.getCity());
         return user;
     }
 

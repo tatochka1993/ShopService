@@ -48,4 +48,27 @@ public class UserServiceImpl implements UserService {
     public void deleteUser(UserDto userDto) {
         userDao.deleteUser(userMapper.userDtoToUser(userDto));
     }
+
+    @Override
+    public boolean isUserExist(UserDto userDto) {
+        if (userDao.getUserByLogin(userDto.getLogin()) != null ) {
+            if (userDao.getUserByLogin(userDto.getLogin()).getRole().getId() == 2 && userDao.getUserByLogin(userDto.getLogin()).getPassword().equals(userDto.getPassword())) {
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
+
+//    @Override
+//    public boolean isLibrarianExist(User user) {
+//        if (userDao.findByLogin(user.getLogin()) != null && userDao.findByLogin(user.getLogin()) != null) {
+//            if (userDao.findByLogin(user.getLogin()).getRole().getId() == 1 && userDao.findByLogin(user.getLogin()).getPassword().equals(user.getPassword())) {
+//                return true;
+//            }
+//            return false;
+//        }
+//        return false;
+//    }
+
 }

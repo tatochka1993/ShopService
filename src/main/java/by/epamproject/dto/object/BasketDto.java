@@ -1,12 +1,17 @@
 package by.epamproject.dto.object;
 
 
+import com.google.gson.annotations.Expose;
+
 import java.io.Serializable;
 
 public class BasketDto implements Serializable {
 
+    @Expose
     private int id;
+    @Expose
     private int userId;
+    @Expose
     private int productId;
 
     public BasketDto() {

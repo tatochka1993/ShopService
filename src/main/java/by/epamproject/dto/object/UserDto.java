@@ -1,15 +1,24 @@
 package by.epamproject.dto.object;
 
+import com.google.gson.annotations.Expose;
+
 import java.io.Serializable;
 
 public class UserDto implements Serializable {
 
+    @Expose
     private int id;
+    @Expose
     private int roleId;
+    @Expose
     private String login;
+    @Expose
     private String password;
+    @Expose
     private String firstName;
+    @Expose
     private String lastName;
+    @Expose
     private String city;
 
     public UserDto() {

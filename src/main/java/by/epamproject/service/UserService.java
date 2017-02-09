@@ -18,4 +18,6 @@ public interface UserService {
 
     void deleteUser(UserDto userDto);
 
+    boolean isUserExist(UserDto userDto);
+
 }
